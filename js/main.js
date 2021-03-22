@@ -1,10 +1,16 @@
+const menuToggle = document.querySelector('.menu-toggle');
+  const nav = document.querySelector('nav');
+  menuToggle.addEventListener('click', () => {
+      if (nav.className != 'active') {nav.className = 'active';}
+      else {nav.className = '';}
+  });
+
 var swiper = new Swiper('.swiper-container', {
   pagination: {
   el: '.swiper-pagination',
   clickable: true,
 },
 });
-
 
 $(document).ready(function(){
   $('.slider-card').slick({
@@ -39,4 +45,12 @@ $(document).ready(function(){
       }
     ]
   });
+    });
+
+
+    var swiper = new Swiper('.swiper', {
+      pagination: {
+      el: '.swiper-pagination',
+      clickable: true,
+    },
     });
